@@ -1,8 +1,6 @@
-_ = require('lodash')
-
-sum = (a, b) => _.add(a, b)
-subtract = (a, b) => _.subtract(a, b)
-multiply = (a, b) => _.multiply(a, b)
-divide = (a, b) => _.floor(_.divide(a, b), 2)
+sum = (a, b) => (a + b)
+subtract = (a, b) => (a - b)
+multiply = (a, b) => (a * b)
+divide = (a, b) => (a / b)
 
 module.exports = {sum, subtract, multiply, divide}
