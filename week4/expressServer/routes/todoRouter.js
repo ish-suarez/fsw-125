@@ -7,29 +7,29 @@ const { v4: uuidv4 } = require('uuid');
 // ------------------------ Todo Endpoint -----------------------
 const todos = [
     {
-        name: 'the todo',
-        description: 'todo descriptions',
+        name: 'Call Doctor',
+        description: 'Ask About Meds',
         todoImage: 'url',
         todoCompleted: false,
         _id: uuidv4()
     },
     {
-        name: 'the todo',
-        description: 'todo descriptions',
+        name: 'Get Groceries',
+        description: 'Need Eggs, Bacon, Potato, Rice, Beads',
         todoImage: 'url',
         todoCompleted: false,
         _id: uuidv4()
     },
     {
-        name: 'the todo',
-        description: 'todo descriptions',
+        name: 'Vacuum The House',
+        description: 'Vacuume',
         todoImage: 'url',
         todoCompleted: false,
         _id: uuidv4()
     },
     {
-        name: 'the todo',
-        description: 'todo descriptions',
+        name: 'Do The Dishes',
+        description: 'I Hate Dishes',
         todoImage: 'url',
         todoCompleted: false,
         _id: uuidv4()
