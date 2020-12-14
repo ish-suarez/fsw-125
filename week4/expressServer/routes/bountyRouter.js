@@ -59,5 +59,4 @@ bountyRouter.route('/')
         res.send(updatedBounty);
     })
 
-
 module.exports = bountyRouter;
