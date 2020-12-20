@@ -8,6 +8,7 @@ import AddBounty from './post/AddBounty';
 export default function Bounty(props) {
     // ------------------------------------------------------------------ Setting Props
     const {firstName, lastName, isAlive, bountyAmount, type, _id} = props;
+    
     // ------------------------------------------------------------------ Setting Toggle State Default To Inactive
     const [toggleEdit, setToggleEdit] = useState(false);
 

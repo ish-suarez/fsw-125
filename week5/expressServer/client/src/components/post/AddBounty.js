@@ -1,10 +1,12 @@
 // ---------------------------------------------------------------- Importing React and useState Hook
 import React, {useState}from 'react'
+
 // ---------------------------------------------------------------- Form Component
 export default function AddBounty(props) {
     // ------------------------------------------------------------ Setting Initial Inputs and Setting Hook For Inputs 
     const initialInputs = {firstName: props.firstName ||  '', lastName: props.lastName || '', isAlive: props.isAlive || null, bountyAmount: props.bountyAmount ||  undefined, type: props.type || ''}
     const [input, setInput] = useState(initialInputs);
+    
     // ------------------------------------------------------------ Handeling Changes From The Form
     const handleChange = (e) => {
         const {name, value} = e.target;
