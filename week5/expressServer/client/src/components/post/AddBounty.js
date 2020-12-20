@@ -1,26 +1,28 @@
+// ---------------------------------------------------------------- Importing React and useState Hook
 import React, {useState}from 'react'
-
+// ---------------------------------------------------------------- Form Component
 export default function AddBounty(props) {
+    // ------------------------------------------------------------ Setting Initial Inputs and Setting Hook For Inputs 
     const initialInputs = {firstName: props.firstName ||  '', lastName: props.lastName || '', isAlive: props.isAlive || null, bountyAmount: props.bountyAmount ||  undefined, type: props.type || ''}
     const [input, setInput] = useState(initialInputs);
-
+    // ------------------------------------------------------------ Handeling Changes From The Form
     const handleChange = (e) => {
         const {name, value} = e.target;
         setInput(prevInput => ({...prevInput, [name]: value}));
     }
-
+    // ------------------------------------------------------------ Handeling The Radio Input Changes
     const handleRadio = (e) => {
         const isAlive = e.currentTarget.value === 'true' ? true : false;
         setInput(prevInput => ({...prevInput, isAlive}));
         
     }
-
+    // ------------------------------------------------------------ Submitting Form / POST
     const formSubmit = (e) => {
         e.preventDefault();
         props.submit(input, props._id);
         setInput(initialInputs);
     }
-
+    // ------------------------------------------------------------ Form With Required inputs
     return (
         <form className="form-container" onSubmit={formSubmit}>
             <div className='form-contents'>
@@ -41,6 +43,7 @@ export default function AddBounty(props) {
                     placeholder='Last Name'
                     required 
                 />
+                {/* Radio Inputs To State Whether Bounty is Dead Or Alive */}
                 <div className='radio-container'>
                     <span>Is Alive</span>
                         <input 

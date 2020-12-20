@@ -16,14 +16,14 @@ import AddBounty from './components/post/AddBounty';
 export default function App() {
     const [bounties, setBounties] = useState([]);
 
-    // ------------------------------ Get All bounties
+    // ------------------------------------------------------------ Get All bounties / GET Request
     const getBounties = () => {
         axios.get('/bounties')
             .then(res => setBounties(res.data))
             .catch(err => console.log(err));
     }
 
-    // ------------------------------ Add Bounty Function
+    // ------------------------------------------------------------ Add Bounty Function / POST Request
     const addNewBounty = newBounty => {
         axios.post('/bounties', newBounty)
             .then(res => {
@@ -31,7 +31,8 @@ export default function App() {
             })
             .catch(err => console.log(err));
     }
-    // ------------------------------ Delete A Bounty
+
+    // ----------------------------------------------------------- Delete A Bounty / Delete Request
     const deleteBounty = bountyId => {
         axios.delete(`/bounties/${bountyId}`)
             .then(res => {
@@ -40,6 +41,7 @@ export default function App() {
             .catch(err => console.log(err));
     }
 
+    // ----------------------------------------------------------- Edit Bounty / PUT Request
     const editBounty = (updates, bountyId ) => {
         axios.put(`/bounties/${bountyId}`, updates) 
             .then(res => {
@@ -48,6 +50,7 @@ export default function App() {
             .catch(err => console.log(err));
     }
 
+    // ----------------------------------------------------------- Use Effect Hook To Perform GET Request
     useEffect(() => {
         getBounties();
     }, [])
@@ -55,6 +58,7 @@ export default function App() {
     return (
         <>
             <Header />
+            {/* Displaying Form And Mapped Bounties */}
             <div className='map-container'>
                 <AddBounty submit={addNewBounty} btnText='Add Bounty'/>
                 {_.map(bounties, bounty => <Bounty {...bounty} key={bounty.firstName} deleteBounty={deleteBounty} editBounty={editBounty}/>)}
