@@ -12,20 +12,23 @@ const bands = [
 
 bandsRouter.route('/')
     // get all
-    .get((req, res) => res.status(200).send(bands))
+    .get((req, res) => {
+        res.status(200).send(bands);
+    })
     // post one
     .post((req, res) => {
         const newBand = req.body;
         newBand._id = uuidv4();
         bands.push(newBand);
-        res.status(201).send(`${newBand} has been added to your bands`);
+        res.status(201).send(`${newBand.bandName} has been added to your bands`);
     })
 // get one
 bandsRouter.get('/:bandId', (req, res, next) => {
     const bandId = req.params.bandId;
     const bandSelected = bands.find(band => band._id === bandId);
     if(!bandSelected) {
-        const error = new Error(`The band with id: ${bandId} does not exist or is not found`);
+        const error = new Error(`The band with id: '${bandId}' does not exist or is not found`);
+        res.status(500);
         return next(error);
     }
     res.status(200).send(bandSelected);
@@ -33,11 +36,12 @@ bandsRouter.get('/:bandId', (req, res, next) => {
 // Query Selector for band origin
 bandsRouter.get('/search/origin', (req, res, next) => {
     const bandOrigin = req.query.origin;
-    const bandOriginQuery = bands.filter(band => band.origin === bandOrigin);
     if (!bandOrigin) {
         const error = new Error(`You must query for bands origin`);
+        res.status(500);
         return next(error);
     }
+    const bandOriginQuery = bands.filter(band => band.origin === bandOrigin);
     res.status(200).send(bandOriginQuery);
 })
 // query for band type
@@ -46,6 +50,7 @@ bandsRouter.get('/search/type', (req, res, next) => {
     const bandTypeQuery = bands.filter(band => band.type === bandType);
     if (!bandTypeQuery) {
         const error = new Error(`${bandType} is not valid. You must query for a music type`);
+        res.status(500);
         return next(error);
     }
     res.status(200).send(bandTypeQuery);
