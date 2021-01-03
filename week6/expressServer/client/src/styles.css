@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+}
+
+.head {
+    padding: 20px;
+    background-color: rgb(143, 138, 138);
+    color: white;
+}
+
+button {
+    margin: 3px;
+    padding: 5px;
+    border-radius: 4px;
+    width: 100px;
+    
+} 
+
+.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:  auto;
+    padding: 20px;
+    width: 100%;
+    background-color: #D9C5B2;
+    color: white;
+}
+
+.form-header {
+    display: block !important;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-contents {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+    padding: 10px;
+    margin: auto;
+    width: 60%;
+}
+
+input {
+    width: 40%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 15px;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    margin: 2px;
+}
+
+lable {
+    text-align: center;
+}
+
+.radio-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.map-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.cards-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-evenly;
+    width: 40%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px thin;
+    box-shadow: 0 0 10px  rgb(143, 138, 138);
+    background-color: #ffb908c9;
+}
+
+.bounty-name {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 300px;
+}
+
+.status {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 10px auto ;
+}
