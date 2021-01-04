@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+}
+
+
+.head {
+    padding: 50px;
+    background-color: #0E1428;
+    color: white;
+}
+
+button {
+    margin: 3px;
+    padding: 5px;
+    border-radius: 4px;
+    width: 100px;
+    
+} 
+
+.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    background-color: #a44b3fcb;
+    color: white;
+    box-shadow: 0 0 10px rgb(6, 184, 6);
+    border-radius: 15px;
+}
+
+.form-header {
+    display: block !important;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-contents {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+    margin: auto;
+}
+
+
+::placeholder {
+    color: #ebe9e98e;
+}
+
+input {
+    width: fit-content;
+    border: 0;
+    border-bottom: 2px solid #EBE9E9;
+    outline: 0;
+    font-size: 10px;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    margin: 2px;
+}
+
+lable {
+    text-align: center;
+}
+
+.radio-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.map-container {
+    display: flex;
+    flex-flow: row wrap;
+    background-image: url('https://images.unsplash.com/photo-1514413494665-cda1387955dd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');
+}
+
+.bounties {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    width: 650px;
+    padding-top: 5px;
+}
+
+.cards-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-evenly;
+    width: 40%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px thin;
+    box-shadow: 0 0 10px red;
+    border-radius: 15px;
+    background-color: #3581b8bb;
+}
+
+.bounty-name {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 230px;
+}
+
+.status {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 10px auto ;
+}
+
+
+
+@media only screen and (min-width: 400px) {
+    .map-container  { 
+        justify-content: center;
+        padding: 30px;
+    }
+    .form-container {
+        margin: auto;
+        margin-bottom: 30px;
+        width: 210px;
+        box-shadow: 0 0 10px rgb(6, 184, 6);
+    }
+
+    .form-contents {
+        display: flex;
+        flex-flow: column nowrap !important;
+        justify-content: space-evenly;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .bounty-name {
+        flex-flow: column wrap;
+        align-content: center;
+    }
+
+    .edit-form {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        width: 200px;
+    }
+
+    .status {
+        font-size: 14px;
+    }
+
+    button {
+        width: fit-content;
+    }
+
+    .edit-button {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: auto;
+    }
+}
