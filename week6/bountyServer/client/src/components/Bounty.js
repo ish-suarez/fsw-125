@@ -24,7 +24,7 @@ export default function Bounty(props) {
                             <h1>{lastName}</h1>
                         </div>
                         <div className='status'>
-                            <h4 style={{color: isAlive ? 'white' : 'red'}}>Status: {isAlive ? 'Is Alive' : 'Is Dead'}</h4>
+                            <h4 style={{color: isAlive ? 'black' : 'red'}}>Status: {isAlive ? 'Is Alive' : 'Is Dead'}</h4>
                             <h3>Reward: $ {bountyAmount}</h3>
                             <h3>Type: {type}</h3>
                         </div>
