@@ -1,0 +1,19 @@
+.shoe {
+    margin: auto;
+    width: 300px;
+    text-align: center;
+    background-color: #E6E6E6;
+    border-radius: 20px;
+    color: #FF8552;
+    padding: 20px;
+
+}
+
+img {
+    width: 250px;
+}
+
+.close-button {
+    float: right;
+    margin: 20px;
+}

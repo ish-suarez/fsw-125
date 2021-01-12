@@ -1,0 +1,47 @@
+.shoe-card {
+    border-radius: 30px;
+    box-shadow: 0 0 15px #E6E6E6;
+    margin: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    width: 350px;
+}
+
+.shoe-name {
+    text-align: center;
+    padding: 5px;
+}
+
+.image-container {
+    display: flex;
+}
+
+.shoe-image {
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.deactivate-button {
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.get-container {
+    width: 400px;
+    background-color: #E6E6E6;
+}
+
+.close-form {
+    float: right;
+    padding: 20px;
+}
